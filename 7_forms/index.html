@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Froms on web-page</title>
+</head>
+<body>
+	<!-- Structure of form -->
+	<h3>Structure of form</h3>
+	<form action="http://www.ruslanrepo.com/subscribe.php" method="get">
+			<p>This is where the form controls will appear.</p>
+	</form>
+	<hr>
+	<!-- Text form Password form  -->
+	<h3>Text form Password form</h3>
+	<form action="http://www.ruslanrepo.com/subscribe.php" method="post">
+		<p> Имя пользователя
+			<input type="text" name="username" size="15" maxlength="30" />
+		</p>
+		<p> Пароль
+			<input type="password" name="password" size="15" maxlength="30" />
+		</p>
+	</form>
+	<hr>
+	<!-- Textarea from-->
+	<h3>Textarea from</h3>
+	<form action="http://www.ruslanrepo.com/subscribe.php" method="get">
+		<p>Что вы думаете об этом выступление?</p>
+			<textarea name="comments" cols="20" rows="4">
+				Введите свои комментарии...
+			</textarea>
+	</form>
+	<hr>
+	<!-- Radio -->
+	<h3>Переключатели</h3>
+	<form action="http://www.ruslanrepo.com/subscribe.php" method="get">
+		<p>Пожалуйста, выберите любимый жанр музыки:
+		<br />
+		<input type="radio" name="gener" value="rock" checked="checked" /> Рок
+		<input type="radio" name="gener" value="pop" /> Поп
+		<input type="radio" name="gener" value="techno" /> Техно
+		</p>
+	</form>
+	<hr>
+	<!-- Checkbox -->
+	<h3>Флажки</h3>
+	<form action="http://www.ruslanrepo.com/subscribe.php" method="get">
+		<p>Пожалуйста, выберете,  где Вы слушаете музуку:
+		<br />
+		<input type="checkbox" name="service" value="home" checked="checked" /> Дома
+		<input type="checkbox" name="service" value="work" /> На работе
+		<input type="checkbox" name="service" value="inroad" /> В дороге
+		</p>
+	</form>	
+	<hr>
+
+	<!-- Select form -->
+	<h3>Раскрывающийся список</h3>
+	<form action="http://www.ruslanrepo.com/subscribe.php" method="get">
+		<p>Пожалуйста, выберете,  где Вы слушаете музуку:</p>
+		<select name="ustroistvo">
+			<option value="ipod">iPod</option>
+			<option value="radio" selected="selected">Радио</option>
+			<option value="computer">Компрьютер</option>
+		</select>
+	</form>	
+	<hr>
+
+	<!-- Select multiple -->
+	<h3>Список можнественного выбора</h3>
+	<form action="http://www.ruslanrepo.com/subscribe.php" method="get">
+		<p>Играете лы Вы на одном из инструментов, перечисленых ниже?(Можно выбрать несколько ответов.)</p>
+		<select name="instrument" size="2" multiple="multiple">
+			<option value="gitara" selected="selected">Гитара</option>
+			<option value="barabany">Барабаны</option>
+			<option value="klavishnyt">Клавишные</option>
+			<option value="basgitara">Бас-гитара</option>
+		</select>
+	</form>
+	<hr>	
+
+	<!-- File upload form -->
+	<h3>Загрузка файлов на сервер</h3>
+	<form action="http://www.ruslanrepo.com/subscribe.php" method="post">
+		<p> Заргузите свою песню в формате MP3</p>
+			<input type="file" name="pesnya" />
+			<br />
+			<input type="submit" name="upload" value="Загрузить">
+	</form>
+	<hr>
+
+	<!-- Submit form -->
+	<h3>Кнопка подтверждения</h3>
+	<form action="http://www.ruslanrepo.com/subscribe.php" method="post">
+		<p>Подпишитесь на рассылку наших новостей:</p>
+			<input type="text" name="email" />
+			<input type="submit" name="podpiska" value="Подписаться">
+	</form>
+	<hr />
+
+	<!-- Image submit -->
+	<h3>Графическая кнопка подтвреждения</h3>
+	<form action="http://www.ruslanrepo.com/subscribe.php" method="post">
+		<p>Подпишитесь на рассылку наших новостей:</p>
+			<input type="text" name="email" />
+			<input type="image" src="images/subscribe.jpg" value="Подписаться" width="100" height="20" />	
+	</form>	
+	<hr />
+
+	<!-- Button and hidden form -->
+	<h3>Кнопки и скрытые элементы форм</h3>
+	<form action="http://www.ruslanrepo.com/subscribe.php" method="post">
+		<p>Кнопки и скрытые элементы формы</p>
+			<button><img src="images/add.gif" alt="добавить" width="10" height="10" />Кнопка</button>
+			<input type="hidden" name="zakladka" value="textofsong" />
+	</form>	
+	<hr />
+
+	<!-- label -->
+	<h3>Метки элементов форм</h3>
+	<form action="http://www.ruslanrepo.com/subscribe.php" method="post">
+		<p>
+			<label>Age:
+				<input type="text" name="age">
+			</label>
+		</p>
+		
+		Sex:
+		<input id="female" type="radio" name="sex" value="f" checked="checked">
+		<label for="female">Female</label>
+
+		<input id="male" type="radio" name="sex" value="m">
+		<label for="male">Male</label>
+	</form>
+	<hr />
+	<!-- fiildset -->
+	<h3>Группировка элементов форм</h3>
+	<fieldset>
+		<legend>Контактная информация</legend>
+		<label>Email:
+			<input type="text" name="email">
+		</label>
+		<br />
+		<label>Phone number:
+			<input type="text" name="phone">
+		</label>
+		<br />
+		<label>Fax:
+			<input type="text" name="fax">
+		</label>
+		<br />
+		<input type="submit" name="contact_submit" value="Отправить">
+	</fieldset>
+	<hr />
+	<!-- validation HTML5-->
+	<h3>Валидация в HTML5</h3>
+
+	<form action="http://www.ruslanrepo.com/subscribe.php" method="post">
+		<fieldset>
+			<legend>Регистрация</legend>
+				<label for="username">Имя пользователя:</label>
+				<input type="text" name="username" id="username" required="required">
+				<label for="password">Пароль:</label>
+				<input type="password" name="password" id="password" required="required">
+				<input type="submit" value="Регистрация">
+		</fieldset>
+	</form>
+	<hr />
+	<!-- date HTML5 -->
+	<h3>Дата в HTML5</h3>
+	<form action="http://www.ruslanrepo.com/subscribe.php" method="post">
+		<label for="date">Дата вылета:</label>
+		<input id="date" type="date" name="depart">
+		<input type="submit" value="Отправить" >
+	</form>
+	<hr />
+	<!-- Email and URL HTML5 -->
+	<h3>HTML5 Email and URL</h3>
+	<form action="http://www.ruslanrepo.com/subscribe.php" method="post">
+		<label for="email">Укажите адрес электронной почты:</label>
+		<input id="email" type="email" name="email">
+		<input type="submit" value="Отправить" >
+	</form>
+
+	<form action="http://www.ruslanrepo.com/subscribe.php" method="post">
+		<p>Укажите адрес вашего сайта</p>
+		<input type="URL" name="website">
+		<input type="submit" value="Отправить" >
+	</form>
+	<hr/>
+
+	<!-- Поле ввода поискового запроса HTML5 -->
+	<h3>Поле ввода поискового запроса HTML5</h3>
+	<form  action="http://www.ruslanrepo.com/subscribe.php" method="post">
+		<p>Поиск:</p>
+		<input type="search" name="poisk">
+		<input type="submit" name="Искать">
+	</form>
+
+	<form  action="http://www.ruslanrepo.com/subscribe.php" method="post">
+		<p>Поиск:</p>
+		<input type="search" name="poisk" placeholder="Системный блок">
+		<input type="submit" name="Искать">
+	</form>
+	<hr />
+
+
+</body>
+</html>
